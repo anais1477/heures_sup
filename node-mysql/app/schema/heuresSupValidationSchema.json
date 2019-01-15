@@ -1,0 +1,52 @@
+{
+    "getSchema":{
+       "type": "object",
+       "required": [
+         "id"     
+       ],
+       "properties": {
+         "id" : {
+           "type": "string"
+         }
+       }
+    },
+    "postSchema":{
+        "type": "object",
+        "required": [
+          "id_user"
+        ],
+        "properties": {
+          "id_user" : {
+            "type" : "integer",
+            "minimum": 1,
+            "maximum": 11
+          },
+          "date": {
+            "type": "string",
+            "format": "date"
+          },
+          "heure_entree": {
+            "type": "string",
+            "format": "time"
+          },
+          "heure_sortie": {
+            "type": "string",
+            "format": "time"
+          },
+          "heure_midi":{
+            "type": "string",
+            "format": "time"
+          },
+          "congé":{
+            "type": "integer",
+            "minLength": 1,
+            "maxLength": 1
+          },
+          "férié":{
+            "type": "integer",
+            "minLength": 1,
+            "maxLength": 1
+          }
+        }
+     }
+}
